@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais</title>
+</head>
+<body>
+    <header>
+        <img src="../static/img/logo.png" alt="Logo do Site">
+        <h1>Agende No Click</h1>
+        <p>Seja bem vindo {{ nomePag }}</p>
+    </header>
+    <main>
+        <h1>Profissionais</h1>
+        <ul>
+            {% for profissional_id, profissional in profissionais.items() %}
+                <li>
+                    <img src="{{ profissional.foto_perfil }}" alt="Foto do Profissional">
+                    <h2>{{ profissional.nome }}</h2>
+                    <p>{{ profissional.nome_estabelecimento }}</p>
+                    <p>{{ profissional.email }}</p>
+                    <p>{{ profissional.telefone }}</p>
+                    <p>{{ profissional.categoria_servico }}</p>
+        
+                    <h3>Horários Disponíveis:</h3>
+                    {% for dia in profissional.dias_disponiveis %}
+                        <p>Dia: {{ dia.dia_semana }} | Horário: {{ dia.horario_inicio }} - {{ dia.horario_fim }}</p>
+                    {% endfor %}
+                </li>
+            {% else %}
+                <p>Nenhum profissional encontrado.</p>
+            {% endfor %}
+        </ul>        
+    </main>
+    <footer>
+        <p>Precisa de ajuda? Contate-nos pelo email juniorstanczak2005@gmail.com ou ligue para (47) 99275-7819</p>
+        <small>Desenvolvido por José Lorico Stanczak Junior. Todos os direitos reservados</small>
+    </footer>
+</body>
+</html>

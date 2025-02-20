@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="../static/styles/cadastro.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/logo.png" alt="Logo do Site">
+        <h1>Agende No Click</h1>
+        <div class="voltar">
+            <a href="cadastro">Registrar</a>
+            <p>ou</p>
+            <a href="/login">Iniciar Sessão</a>
+        </div>
+    </header>
+    <main>
+        <h1>Registro de Usuário</h1>
+        <form action="postCadastro" method="POST">
+            <div class="div-formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="div-formulario">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="div-formulario">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="div-formulario">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="div-formulario">
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+        
+        <p>Já possui uma conta? <a href="/login">Login</a></p>
+        <p>É um profissional? <a href="/cadastroProfissional">Cadastre-se aqui</a></p>
+    </main>
+    <footer>
+        <p>Precisa de ajuda? Contate-nos pelo email juniorstanczak2005@gmail.com ou ligue para (47) 99275-7819</p>
+        <small>Desenvolvido por José Lorico Stanczak Junior. Todos os direitos reservados</small>
+    </footer>
+</body>
+</html>
