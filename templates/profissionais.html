@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profissionais</title>
+    <link rel="stylesheet" href="../static/styles/profissionais.css">
 </head>
 <body>
     <header>
@@ -15,15 +16,17 @@
         <h1>Profissionais</h1>
         <ul>
             {% for profissional_id, profissional in profissionais.items() %}
-                <li>
+                <li class="card">
                     <img src="{{ profissional.foto_perfil }}" alt="Foto do Profissional">
-                    <h2>{{ profissional.nome }}</h2>
-                    <p>{{ profissional.nome_estabelecimento }}</p>
-                    <p>{{ profissional.email }}</p>
-                    <p>{{ profissional.telefone }}</p>
-                    <p>{{ profissional.categoria_servico }}</p>
+                    <div>
+                        <h2>{{ profissional.nome }}</h2>
+                        <h3>{{ profissional.nome_estabelecimento }}</h3>
+                        <p>{{ profissional.email }}</p>
+                        <p>{{ profissional.telefone }}</p>
+                        <p>{{ profissional.categoria_servico }}</p>
+                    </div>
         
-                    <h3>Horários Disponíveis:</h3>
+                    <p>Horários Disponíveis:</p>
                     {% for dia in profissional.dias_disponiveis %}
                         <p>Dia: {{ dia.dia_semana }} | Horário: {{ dia.horario_inicio }} - {{ dia.horario_fim }}</p>
                     {% endfor %}

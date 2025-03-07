@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registre-se</title>
+    <link rel="stylesheet" href="../static/styles/cadastroProfissional.css">
 </head>
 <body>
     <header>
@@ -12,6 +13,7 @@
         <a href="cadastro">Registrar</a> <p>ou</p> <a href="/login">Iniciar Sessão</a>
         </header>
         <main>
+            <h1>Registro de Profissionais</h1>
             <form action="postCadastroProfissional" method="POST" enctype="multipart/form-data">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -40,13 +42,13 @@
                 </select>
 
                 <div><label for="dia_semana"><strong>Selecione os dias disponíveis:</strong></label><br>
-                    <input type="checkbox" name="dias" value="2"> Segunda-Feira
-                    <input type="checkbox" name="dias" value="3"> Terça-Feira
-                    <input type="checkbox" name="dias" value="4"> Quarta-Feira
-                    <input type="checkbox" name="dias" value="5"> Quinta-Feira
-                    <input type="checkbox" name="dias" value="6"> Sexta-Feira
-                    <input type="checkbox" name="dias" value="7"> Sábado
-                    <input type="checkbox" name="dias" value="1"> Domingo
+                    <input type="checkbox" name="dias" value="2"> Segunda-Feira <br>
+                    <input type="checkbox" name="dias" value="3"> Terça-Feira <br>
+                    <input type="checkbox" name="dias" value="4"> Quarta-Feira <br>
+                    <input type="checkbox" name="dias" value="5"> Quinta-Feira <br>
+                    <input type="checkbox" name="dias" value="6"> Sexta-Feira <br>
+                    <input type="checkbox" name="dias" value="7"> Sábado <br>
+                    <input type="checkbox" name="dias" value="1"> Domingo <br>
                     <br><br>
                 
                     <label for=""><strong>Horário de Atendimento:</strong></label><br>

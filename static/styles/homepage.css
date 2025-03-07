@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gradient-background {
+    background: linear-gradient(105deg, #1d0a39, #391274, #491a91);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    background: #161617;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+header img {
+    width: 3rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px 0;
+}
+
+nav h1 {
+    background: #343950;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 70px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    width: 80px;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleX(0);
+    visibility: hidden;
+}
+
+.menu li:hover a::after {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+
+
+body {
+    margin: 0;
+    background: #111111;
+}
+
+main {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    perspective: 2px;
+    flex: 1;
+}
+
+section {
+    transform-style: preserve-3d;
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: visible;
+    flex-direction: column;
+}
+
+.no-parallax {
+    background-color: #111111;
+    z-index: 999;
+    text-align: center;
+}
+
+.parallax {
+    height: 20vh;
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg::after {
+    background-size: cover;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 14px;
+}
